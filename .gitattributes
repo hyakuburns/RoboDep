@@ -1,0 +1,37 @@
+# Sources
+*.c     text diff=c
+*.cc    text diff=cpp
+*.cxx   text diff=cpp
+*.cpp   text diff=cpp
+*.c++   text diff=cpp
+*.hpp   text diff=cpp
+*.h     text diff=c
+*.h++   text diff=cpp
+*.hh    text diff=cpp
+# Compiled Object files
+*.slo   filter=lfs diff=lfs merge=lfs -binary
+*.lo    filter=lfs diff=lfs merge=lfs -binary
+*.o     filter=lfs diff=lfs merge=lfs -binary
+*.obj   filter=lfs diff=lfs merge=lfs -binary
+# Precompiled Headers
+*.gch   filter=lfs diff=lfs merge=lfs -binary
+*.pch   filter=lfs diff=lfs merge=lfs -binary
+# Compiled Dynamic libraries
+*.so    filter=lfs diff=lfs merge=lfs -binary
+*.dylib filter=lfs diff=lfs merge=lfs -binary
+*.dll   filter=lfs diff=lfs merge=lfs -binary
+# Compiled Static libraries
+*.lai   filter=lfs diff=lfs merge=lfs -binary
+*.la    filter=lfs diff=lfs merge=lfs -binary
+*.a     filter=lfs diff=lfs merge=lfs -binary
+*.lib   filter=lfs diff=lfs merge=lfs -binary
+# Executables
+*.exe   filter=lfs diff=lfs merge=lfs -binary
+*.out   filter=lfs diff=lfs merge=lfs -binary
+*.app   filter=lfs diff=lfs merge=lfs -binary
+*      text=auto
+*.clip filter=lfs diff=lfs merge=lfs -binary
+*.png  filter=lfs diff=lfs merge=lfs -binary
+*.jpg  filter=lfs diff=lfs merge=lfs -binary
+xxx    filter=lfs diff=lfs merge=lfs -binary
+*.out  filter=lfs diff=lfs merge=lfs -binary
