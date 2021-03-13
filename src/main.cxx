@@ -35,8 +35,6 @@ void exitWRetVal(int retVal) {
 }
 
 void initRBD(int argc, char **argv) {
-
-    printf("%d\n", argc);
     if (1 == argc) {
         printf("You literally didnt even try.\n");
         exit(EXIT_FAILURE);
