@@ -1,20 +1,21 @@
-CC = gcc
+CC = g++
 CFLAGS = -Wall -Wextra -Wpedantic
-LDFLAGS = -lgit2 -lssh2
+LDFLAGS = #-lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -lglfw -lvulkan -lXxf86vm -lXrandr -lXi
 BIN = xxx
 ASM = xxx.S
-VERS= -std=c99
+VERS= -std=c++17
 PREFIX ?= /usr/local
-DBG= debugxxx
+DBG = debuxxx
+
 
 all: $(BIN)
 
 #config.h: config.def.h
 #	cp config.def.h config.h
 
-SRC = src/main.c#config.h
+SRC = src/main.cxx#config.h
 
-main.o: src/main.c
+main.o: src/main.cxx
 	$(CC) -c $(SRC) $(CFLAGS)
 
 OBJ = main.o
@@ -26,7 +27,7 @@ assembly: xxx
 	$(CC) -S $(OBJ) -o $(ASM) $(LDFLAGS)
 
 debug: xxx
-	$(CC) -g $(OBJ) -o $(DBG) $(LDFLAGS) $(VERS)
+	$(CC) -g $(SRC) -o $(DBG) $(LDFLAGS) $(VERS)
 
 #install: xxx
 #	mkdir -p ${DESTDIR}${PREFIX}/bin
@@ -39,4 +40,3 @@ clean:
 	rm -f xxx
 
 .PHONY: all install uninstall clean
-
