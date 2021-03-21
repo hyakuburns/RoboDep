@@ -75,6 +75,8 @@ func cloneHG(path string) {
 }
 
 func ParseDeps(fileLoc string) {
+	//TODO: make it so it checks for the file and then creates it adding whats needed if it doesnt exist, preferably use a template
+	//FIXME:lelelelelellele
 	file, err := os.Open(fileLoc)
 	fileError(fileLoc, err)
 	defer file.Close()
