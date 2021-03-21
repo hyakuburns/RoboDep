@@ -136,7 +136,7 @@ func GitAddRepo(fileLoc string, argv []string) {
 	defer f.Close()
 	wbool := gitCheckEQ(combinedArgs, f)
 	if wbool {
-		fmt.Printf("Cloning alone %s...\n", tokenize[name])
+		fmt.Printf("Cloning %s...\n", tokenize[name])
 		cloneGit(argv[2])
 	} else {
 		_, err = f.WriteString("git " + argv[2] + "\n")
