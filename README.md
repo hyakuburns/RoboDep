@@ -10,7 +10,6 @@ Possible simple dependency(?) manager for Robopill
 
 ### syntax highlighting
 [emacs](https://github.com/hyakuburns/robodep.el)
-
 [vim](https://github.com/hyakuburns/robodep.vim)
 
 ### Special thanks 
