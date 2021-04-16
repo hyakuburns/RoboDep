@@ -161,7 +161,16 @@ func GitAddRepo(fileLoc string, argv []string) {
 	tokenize := strings.SplitAfter(argv[2], "/")
 	name := len(tokenize) - 1
 
-	f, err := os.OpenFile(fileLoc, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0700)
+	if !FileExistence(fileLoc) {
+		var file *os.File
+		var err error
+		file, err = os.OpenFile(fileLoc, os.O_CREATE|os.O_RDWR, 0700)
+		fileError(fileLoc, err)
+		createDepF(file)
+		file.Close()
+	}
+
+	f, err := os.OpenFile(fileLoc, os.O_APPEND|os.O_RDWR, 0700)
 	fileError(fileLoc, err)
 	defer f.Close()
 	wbool := gitCheckEQ(combinedArgs, f)
