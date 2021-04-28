@@ -9,7 +9,6 @@ Possible simple dependency(?) manager for Robopill
 ```rbd hg [URL]``` to fetch a mercurial repository, if the file doesn't exist it'll be created.
 
 ### syntax highlighting
-[emacs](https://github.com/hyakuburns/robodep.el)
 [vim](https://github.com/hyakuburns/robodep.vim)
 
 ### Special thanks 
