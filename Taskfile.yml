@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -o bin/rbd src/*.go 
+
+  release:
+    cmds: 
+      - go build  -o bin/rbd -ldflags="-s -w" src/*.go
+
+  install:
+    cmds:
+      - task: release
+      - cp ./bin/rbd ~/go/bin/
