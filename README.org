@@ -1,0 +1,20 @@
+* RoboDep
+Possible simple dependency(?) manager for Robopill.
+
+** Usage
+~rbd up~ to read the ~dep.robo~ file, it doesn't exist it'll be created.
+
+~rbd git [URL]~ to fetch a git repository, if the file doesn't exist it'll be created.
+
+~rbd hg [URL]~ to fetch a mercurial repository, if the file doesn't exist it'll be created.
+
+*** syntax highlighting
+[[https://github.com/hyakuburns/robodep.vim][vim]]
+
+*** Clarification
+This is based around the idea of cloning projects and compiling or tweaking
+for your needs. This is not a complete robust package manager, nor should it
+be one, but if you come up with a decent idea to add to it, do tell.
+
+***** Special thanks
+to myself
